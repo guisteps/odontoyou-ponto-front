@@ -1,0 +1,44 @@
+.box {
+  margin-bottom: 64px;
+  border: 3px solid mistyrose;
+  width: 480px;
+  height: 280px;
+  padding: 16px;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-border {
+  background: #fff;
+  text-align: center;
+  width: 150px;
+  height: 60px;
+  color: #000;
+  font-size: 30px;
+  font-family: monospace;
+  border: 2px #ffbeb8 groove;
+  border-radius: 10px;
+  bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  align-self: flex-start;
+}
+
+.radio-button {
+  margin: 5px;
+}

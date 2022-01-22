@@ -1,0 +1,9 @@
+<mat-toolbar class="cabecalho" *ngIf="currentRoute != '/'">
+    <img src="../../../assets/logo3.png" alt="logo" height="auto">
+    <div>
+        <span routerLink="ponto">Ponto</span>
+        <span routerLink="cadastro">Cadastro</span>
+        <span routerLink="consulta">Consulta</span>
+        <span (click)="sair()">Sair</span>
+    </div>
+</mat-toolbar>

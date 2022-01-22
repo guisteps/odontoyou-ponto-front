@@ -1,0 +1,17 @@
+.box {
+    margin-bottom: 64px;
+    border: 3px solid mistyrose;
+    width: 480px;
+    height: 260px;
+    padding: 16px;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-form-field {
+    width: 70%;
+}

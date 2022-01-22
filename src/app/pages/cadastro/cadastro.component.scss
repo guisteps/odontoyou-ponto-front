@@ -1,0 +1,25 @@
+.mat-card {
+    margin-bottom: 64px;
+    border: 2px solid mistyrose;
+    width: 480px;
+    height: 380px;
+    border-radius: 25px;
+    box-shadow: 6px 6px 10px 1px #fceeec;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px 16px;
+}
+
+.div-btn {
+    display: flex;
+    justify-content: center;
+}

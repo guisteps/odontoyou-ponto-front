@@ -1,0 +1,33 @@
+<mat-card>
+    <mat-card-title>Cadastrar Novo Funcionário</mat-card-title>
+    <mat-card-content class="full-width">
+        <form [formGroup]="frmFuncionario" class="div-form">
+            <mat-form-field>
+                <input matInput placeholder="CPF (só números)" formControlName="cpf">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="password" placeholder="Senha" formControlName="senha">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="password" placeholder="Confirme a senha" formControlName="senhaconf">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Nome" formControlName="nome">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="mail" placeholder="E-mail" formControlName="email">
+            </mat-form-field>
+
+            <mat-checkbox formControlName="adm">Administrador</mat-checkbox>
+        </form>
+        
+        <div class="div-btn">
+            <button mat-raised-button class="btn-default" (click)="salvar()"
+                [disabled]="!frmFuncionario.valid">Salvar</button>
+        </div>
+    </mat-card-content>
+</mat-card>

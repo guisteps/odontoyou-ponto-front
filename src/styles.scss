@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$odontoyou-ponto-front-primary: mat-palette($mat-indigo);
+$odontoyou-ponto-front-accent: mat-palette($mat-pink, A200, A100, A400);
+
+$odontoyou-ponto-front-warn: mat-palette($mat-red);
+
+
+$odontoyou-ponto-front-theme: mat-light-theme((
+  color: (
+    primary: $odontoyou-ponto-front-primary,
+    accent: $odontoyou-ponto-front-accent,
+    warn: $odontoyou-ponto-front-warn,
+  )
+));
+
+@include angular-material-theme($odontoyou-ponto-front-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.full-width {
+  width: 100%;
+}
+
+.btn-default {
+  background-color: #fceeec;
+}
+
+.mat-focused .mat-form-field-label {
+  color: #FFBEB8 !important;
+ }
+
+.mat-form-field-underline {
+  background-color: #FFBEB8 !important;
+} 
+
+.mat-form-field-ripple {
+ background-color: #FFBEB8 !important;;
+}

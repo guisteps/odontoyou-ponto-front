@@ -1,0 +1,22 @@
+<mat-card class="box">
+
+    <div class="clock-border" #timediv> </div>
+
+    <mat-radio-group class="radio-group" [(ngModel)]="marcacao">
+        <mat-radio-button class="radio-button" [disabled]="pontoHoje.entrada" [value]="1"> Entrada
+        </mat-radio-button>
+
+        <mat-radio-button class="radio-button" [disabled]="pontoHoje.idaIntervalo" [value]="2"> Ida Intervalo
+        </mat-radio-button>
+
+        <mat-radio-button class="radio-button" [disabled]="pontoHoje.voltaIntervalo" [value]="3">Volta Intervalo
+        </mat-radio-button>
+
+        <mat-radio-button class="radio-button" [disabled]="pontoHoje.saida" [value]="4"> Saída
+        </mat-radio-button>
+    </mat-radio-group>
+
+    <div>
+        <button (click)="marcarPonto()" mat-raised-button class="btn-default" [disabled]="!marcacao">Marcar</button>
+    </div>
+</mat-card>
