@@ -1,4 +1,3 @@
-import { env } from "process";
 import { environment } from "../../environments/environment";
 
 export class ServiceBase {
