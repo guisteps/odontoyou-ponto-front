@@ -2,7 +2,7 @@ import { environment } from "../../environments/environment";
 
 export class ServiceBase {
     
-    baseURL = '';
+    baseURL: string = '';
 
     constructor() {
         if (environment.production)
