@@ -16,7 +16,9 @@ export class LoginComponent {
   senha: string;
   @ViewChild('btnLogin', { read: ElementRef }) btnLogin: ElementRef;
 
-  constructor(public loginSrv: LoginService, public router: Router, public snack: MatSnackBar, public userSrv: UsuarioService) { }
+  constructor(public loginSrv: LoginService, public router: Router, public snack: MatSnackBar, public userSrv: UsuarioService) {
+    this.loginSrv.alive().subscribe(r => { }); //apenas para ativar o backend heroku free tier
+  }
 
   login() {
     this.loginSrv.login({ 'cpf': this.cpf, 'senha': this.senha }).subscribe(

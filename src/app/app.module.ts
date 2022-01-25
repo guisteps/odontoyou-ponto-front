@@ -19,8 +19,13 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatTableModule } from '@angular/material/table';
 import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
 import { ConsultaComponent } from './pages/consulta/consulta.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { LoaderModule } from './components/loader/loader.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,7 @@ import { ConsultaComponent } from './pages/consulta/consulta.component';
     PageNotFoundComponent,
     PontoComponent,
     CabecalhoComponent,
-    ConsultaComponent
+    ConsultaComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,12 @@ import { ConsultaComponent } from './pages/consulta/consulta.component';
     MatSnackBarModule,
     MatToolbarModule,
     MatCheckboxModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule,
+    LoaderModule
   ],
   providers: [
     DatePipe,

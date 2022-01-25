@@ -26,8 +26,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   width: 100%;
 }
 
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
 .btn-default {
   background-color: #fceeec;
+}
+
+.btn-excel {
+  background-color: #1E6E42;
+  color: white;
 }
 
 .mat-focused .mat-form-field-label {

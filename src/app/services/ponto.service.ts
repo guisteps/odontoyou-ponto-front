@@ -20,8 +20,8 @@ export class PontoService extends ServiceBase {
     return this.http.get<Pontos>(this.baseService + '/dia/' + cpf + "/" + dia);
   }
 
-  pontosDoMes(cpf: string, mesAno: string): Observable<Pontos> {
-    return this.http.get<Pontos>(this.baseService + '/mes/' + cpf + "/" + mesAno);
+  pontosDoMes(cpf: string, mesAno: string): Observable<Pontos[]> {
+    return this.http.get<Pontos[]>(this.baseService + '/mes/' + cpf + "/" + mesAno);
   }
 
   salvarPonto(body: Pontos): Observable<Pontos> {

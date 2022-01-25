@@ -13,6 +13,10 @@ export class LoginService extends ServiceBase {
     super();
   }
 
+  alive() {
+    return this.http.get(this.baseURL + '/alive');
+  }
+
   login(body: any): Observable<AuthenticationModel> {
     return this.http.post<AuthenticationModel>(this.baseURL + '/autenticar', body);
   }

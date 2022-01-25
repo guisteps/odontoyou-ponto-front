@@ -1,1 +1,55 @@
-<p>Em construção!</p>
+<mat-card>
+    <mat-card-content class="card-content">
+        <mat-form-field>
+            <mat-label>Selecione o mês e ano</mat-label>
+            <input matInput [matDatepicker]="dp" [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp startView="multi-year" (yearSelected)="chosenYearHandler($event)"
+                (monthSelected)="chosenMonthHandler($event, dp)" panelClass="example-month-picker">
+            </mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field class="form-field-func">
+            <mat-label>Funcionário</mat-label>
+            <mat-select [(ngModel)]="funcionario">
+                <mat-option [value]="f" *ngFor="let f of ltFuncionarios">{{ f.nome }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button class="btn-default btn-busca" (click)="buscar()"
+            [disabled]="!funcionario">Buscar</button>
+
+        <button mat-raised-button class="btn-excel btn-busca" (click)="excel()"
+            [disabled]="!ltPontosDoMes || ltPontosDoMes.length == 0">Excel</button>
+    </mat-card-content>
+</mat-card>
+
+<table id="table" mat-table [dataSource]="ltPontosDoMes" *ngIf="ltPontosDoMes && ltPontosDoMes.length > 0">
+    <ng-container matColumnDef="dia">
+        <th mat-header-cell *matHeaderCellDef id="dia"> Dia </th>
+        <td mat-cell *matCellDef="let element"> {{element.dia}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="entrada">
+        <th mat-header-cell *matHeaderCellDef id="entrada"> Entrada </th>
+        <td mat-cell *matCellDef="let element"> {{element.entrada}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="idaIntervalo">
+        <th mat-header-cell *matHeaderCellDef id="idaIntervalo"> Ida Intervalo </th>
+        <td mat-cell *matCellDef="let element"> {{element.idaIntervalo}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="voltaIntervalo">
+        <th mat-header-cell *matHeaderCellDef id="voltaIntervalo"> Volta Intervalo </th>
+        <td mat-cell *matCellDef="let element"> {{element.voltaIntervalo}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="saida">
+        <th mat-header-cell *matHeaderCellDef id="saida"> Saída </th>
+        <td mat-cell *matCellDef="let element"> {{element.saida}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

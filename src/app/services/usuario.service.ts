@@ -16,6 +16,10 @@ export class UsuarioService extends ServiceBase {
     this.baseService = this.baseURL + '/users';
   }
 
+  getAllUsuarios(): Observable<User[]> {
+    return this.http.get<User[]>(this.baseService);
+  }
+
   getUsuario(cpf: string): Observable<User> {
     return this.http.get<User>(this.baseService + '/' + cpf);
   }

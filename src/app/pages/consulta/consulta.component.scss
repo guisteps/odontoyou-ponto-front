@@ -1,0 +1,35 @@
+.example-month-picker .mat-calendar-period-button {
+  pointer-events: none;
+}
+
+.example-month-picker .mat-calendar-arrow {
+  display: none;
+}
+
+.mat-card {
+  width: 50%;
+  margin: 8px;
+}
+
+.card-content {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ width: 100%;
+}
+
+.form-field-func {
+  min-width: 240px;
+}
+
+.btn-busca {
+  height: fit-content;
+  align-self: center;
+}
+
+.mat-table {
+  width: 90%;
+  padding: 0px 16px;
+  margin-left: 8px;
+  box-shadow: 0px 2px 4px 1px #444444;
+}
